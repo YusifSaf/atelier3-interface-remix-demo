@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#ffffff">
+  <title>Stride Feed</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <span class="logo">Stride</span>
+    <span class="topbar-icons" aria-hidden="true">♡ &nbsp; ✉</span>
+  </header>
+
+  <main id="feed" class="feed"></main>
+
+  <nav class="tabbar" aria-hidden="true">
+    <span>⌂</span><span>⌕</span><span>＋</span><span>▶</span><span>☺</span>
+  </nav>
+
+  <div id="start" class="start">
+    <div class="start-card">
+      <h1>Interface Remix</h1>
+      <p>Scrolling with your feet.<br>Hold the phone and walk.</p>
+      <button id="startBtn">Start walking</button>
+      <p id="startMsg" class="start-msg"></p>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <!-- add ?debug=1 to the end of url to see the debug panel -->
+  <aside id="debug" class="debug" hidden>
+    <div>steps: <b id="dbgSteps">0</b> &nbsp; delta: <b id="dbgDelta">0.00</b></div>
+    <label>threshold <span id="thrVal"></span>
+      <input id="thr" type="range" min="0.5" max="5" step="0.1">
+    </label>
+    <label>px per step <span id="pxVal"></span>
+      <input id="px" type="range" min="20" max="400" step="10">
+    </label>
+  </aside>
+
+  <script src="app.js"></script>
+</body>
+</html>
